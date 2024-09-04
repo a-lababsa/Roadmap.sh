@@ -1,0 +1,12 @@
+# Compiled JavaScript files
+*.js
+
+# Source maps
+*.js.map
+
+# Output directories
+/build
+
+
+# Node_modules (unless using monorepo or specific package management)
+node_modules/

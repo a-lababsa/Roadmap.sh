@@ -1,0 +1,29 @@
+{
+  "name": "your-project-name",
+  "version": "1.0.0",
+  "description": "Your project description",
+  "main": "index.ts",
+  "bin": {
+    "cli": "index.ts"
+  },
+  "scripts": {
+    "test": "jest --config jest.config.ts --no-cache --verbose",
+    "build": "tsc",
+    "start": "ts-node index.ts",
+    "prettier:check": "prettier --check .",
+    "prettier:write": "prettier --write ."
+  },
+  "dependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^22.5.3",
+    "prettier": "^2.8.8",
+    "ts-jest": "^29.2.5"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
