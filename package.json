@@ -8,10 +8,7 @@
   },
   "scripts": {
     "test": "jest --config jest.config.ts --no-cache --verbose",
-    "build": "tsc",
-    "start": "ts-node index.ts",
-    "prettier:check": "prettier --check .",
-    "prettier:write": "prettier --write ."
+    "start": "ts-node index.ts"
   },
   "dependencies": {
     "ts-node": "^10.9.2",

@@ -1,30 +1,21 @@
-import { Task }  from "../src/taskFile"
+import { commandMap } from "./Command" 
 
-export function main(commands: Array<string> = []) {
+export async function main(commands: Array<string> = []) {
+  if (commands.length === 0) {
+    process.stderr.write("Error: No command provided.\n") 
+    return 
+  }
 
-    if (commands.length === 0) {
-        // Please use 'ADD' to add a new task.
-        process.stdout.write("Error: No command provided.\n");
-        return;
+  const command = commands[0].trim().toLowerCase()
+  const cmd = commandMap[command] 
+
+  if (cmd) {
+    try {
+      await cmd.execute(commands) 
+    } catch (err) {
+      process.stderr.write(`Error: ${err}\n`) 
     }
-
-    const command = commands[0].trim().toLocaleLowerCase();
-        
-    switch (command) {
-        case 'add':
-            
-            if (!commands[1]) {
-                process.stdout.write(`Error: missing task description\n`);
-                return;
-            }
-            if (commands[1]) {
-                process.stdout.write('Task added successfully\n')
-                Task.initialization().then(() => {Task.add(commands[1])})
-
-                
-            }
-            break;
-        default:
-            process.stdout.write("Error: Unknown command.\n");
-    }
+  } else {
+    process.stderr.write("Error: Unknown command.\n") 
+  }
 }
