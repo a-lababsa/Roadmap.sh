@@ -19,14 +19,8 @@ class AddCommand implements Command {
 class ListCommand implements Command {
   async execute(commands: string[]): Promise<void> {
     const status = commands[1]?.trim().toLowerCase()
-    const validStatuses = ["todo", "done", "in-progress"]
 
-    let tasksToDisplay: Task[] = []
-    if (status && validStatuses.includes(status)) {
-      tasksToDisplay = await TaskRepository.list(status)
-    } else {
-      tasksToDisplay = await TaskRepository.list()
-    }
+    let tasksToDisplay = await TaskRepository.list(status)
 
     if (tasksToDisplay.length > 0) {
       tasksToDisplay.forEach((task) => {

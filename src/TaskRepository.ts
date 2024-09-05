@@ -24,7 +24,7 @@ export class TaskRepository {
         encoding: "utf8",
       })
       const parsedData = JSON.parse(data)
-      TaskRepository.taskStruct.tasks = parsedData.tasks.map((task: any) =>
+      TaskRepository.taskStruct.tasks = parsedData.tasks.map((task: object) =>
         Task.hydrate(task)
       )
     } catch (error: any) {
@@ -80,6 +80,8 @@ export class TaskRepository {
     const validStatuses = ["todo", "done", "in-progress"]
     if (status && validStatuses.includes(status)) {
       return TaskRepository.taskStruct.tasks.filter((t) => t.status === status)
+    } else if (status && !validStatuses.includes(status)) {
+      return []
     }
     return TaskRepository.taskStruct.tasks
   }
