@@ -86,6 +86,17 @@ export class TaskRepository {
     return TaskRepository.taskStruct.tasks
   }
 
+  public static async updateStatus(id: number, status: string) {
+    await TaskRepository.loadTasks()
+    const task = TaskRepository.find(id)
+    if (task) {
+      task.setStatus(status)
+      await TaskRepository.saveTasks()
+    } else {
+      throw new Error(`Task with ID: ${id} not found`)
+    }
+  }
+
   private static find(id: number): Task | undefined {
     return TaskRepository.taskStruct.tasks.find((t) => t.id === id)
   }

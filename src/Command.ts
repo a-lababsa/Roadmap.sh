@@ -66,9 +66,41 @@ class DeleteCommand implements Command {
   }
 }
 
+class InProgressCommand implements Command {
+  async execute(commands: string[]): Promise<void> {
+    if (!commands[1]) {
+      process.stderr.write("Error: missing ID.\n")
+      return
+    }
+    const id = Number(commands[1])
+    if (isNaN(id)) {
+      process.stderr.write("Error: ID must be a number.\n")
+      return
+    }
+    await TaskRepository.updateStatus(id, 'in-progress')
+  }
+  
+}
+
+class DoneCommand implements Command {
+  async execute(commands: string[]): Promise<void> {
+    if (!commands[1]) {
+      process.stderr.write("Error: missing ID.\n")
+      return
+    }
+    const id = Number(commands[1])
+    if (isNaN(id)) {
+      process.stderr.write("Error: ID must be a number.\n")
+      return
+    }
+    await TaskRepository.updateStatus(id, 'done')
+  }
+}
 export const commandMap: Record<string, Command> = {
   add: new AddCommand(),
   list: new ListCommand(),
   update: new UpdateCommand(),
   delete: new DeleteCommand(),
+  'mark-in-progress': new InProgressCommand(),
+  'mark-done': new DoneCommand(),
 }

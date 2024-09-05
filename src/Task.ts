@@ -17,6 +17,11 @@ export class Task implements Task {
     this.updatedAt = new Date()
   }
 
+  setStatus(status: string) {
+    this.status = status
+    this.updatedAt = new Date()
+  }
+
   static hydrate(data: Partial<Task>): Task {
     if (typeof data.createdAt === "string") {
       data.createdAt = new Date(data.createdAt)
