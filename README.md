@@ -7,6 +7,11 @@
 - [Description du projet](https://roadmap.sh/projects/task-tracker)
 - [Mon implémentation](./Task-Tracker-CLI/README.md)
 
+### 2. Single Page CV
+
+- [Description du projet](https://roadmap.sh/projects/single-page-cv)
+- [Mon implémentation](./Single-Page-CV/README.md)
+
 ## À propos
 
 Ce document répertorie les différents projets et implémentations en cours de développement dans le cadre de **Roadmap.sh**.
