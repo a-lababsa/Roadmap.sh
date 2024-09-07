@@ -18,8 +18,8 @@ Task Manager est une application en ligne de commande pour la gestion des tâche
 1. **Cloner le dépôt :**
 
    ```bash
-   git clone https://github.com/a-alababsa/task-manager.git
-   cd task-manager
+   git clone https://github.com/a-lababsa/Roadmap.sh.git
+   cd Task-Tracker-CLI
    ```
 
 2. **Installer les dépendances :**

@@ -1,7 +1,7 @@
 {
-  "name": "your-project-name",
+  "name": "task-tracker-cli",
   "version": "1.0.0",
-  "description": "Your project description",
+  "description": "Task tracker CLI ",
   "main": "index.ts",
   "bin": {
     "cli": "index.ts"
