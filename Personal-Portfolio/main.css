@@ -1,0 +1,161 @@
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.logo {
+  float: left;
+  padding: 14px 16px;
+}
+
+.nav-links {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.nav-links li {
+  float: right;
+  display: block;
+  padding: 14px 16px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-links li:hover {
+  cursor: pointer;
+}
+
+.header,
+footer {
+  text-align: center;
+  padding: 60px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 60vh;
+  flex: 1;
+}
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+  .flex-items {
+    flex: 1;
+  }
+  h2 {
+    text-align: center;
+  }
+  .projects li {
+    text-align: center;
+  }
+
+  .logo {
+    float: none;
+    text-align: center;
+  }
+
+  .nav-links {
+    text-align: center;
+  }
+
+  .nav-links li {
+    float: none;
+    display: inline-block;
+  }
+
+  .header,
+  footer {
+    padding: 15px;
+  }
+
+  .reviews p {
+    display: inline;
+  }
+}
+
+.flex-items {
+  flex: 1;
+  border: 1px solid black;
+}
+
+.flex-items h2 {
+  font-size: 23px;
+  padding: 20px;
+}
+
+/* Project section */
+
+.projects li {
+  list-style-type: none;
+  border-bottom: 2px solid black;
+  padding: 20px;
+}
+
+/* Works section */
+
+.works {
+  display: flex;
+  flex-direction: column;
+}
+
+.works article {
+  flex: 1;
+  border-bottom: 2px solid black;
+}
+
+.works article div {
+  padding: 0 10px 10px 20px;
+}
+
+/* Education section */
+
+.education-container {
+  margin: 0 0 20px 20px;
+}
+
+.education ul {
+  list-style-type: none;
+}
+
+.education li::before {
+  content: "- ";
+}
+
+/* Reviews section */
+
+.reviews h2 {
+  padding: 20px;
+}
+
+.reviews {
+  flex: 1;
+  text-align: center;
+}
+
+.reviews p {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 15px;
+  display: inline-block;
+  margin-right: 20px;
+
+}

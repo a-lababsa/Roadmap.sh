@@ -17,6 +17,11 @@
 - [Description du projet](https://roadmap.sh/projects/basic-html-website)
 - [Mon implémentation](./Basic-HTML-Website/README.md)
 
+### 3. Basic HTML Website
+
+- [Description du projet](https://roadmap.sh/projects/portfolio-website)
+- [Mon implémentation](./Personal-Portfolio/README.md)
+
 ## À propos
 
 Ce document répertorie les différents projets et implémentations en cours de développement dans le cadre de **Roadmap.sh**.
