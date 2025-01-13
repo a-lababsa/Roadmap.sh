@@ -1,32 +1,13 @@
-# Roadmap.sh
+# Projects from Roadmap.sh
 
-## Projets
+This repository contains projects built following the [roadmap.sh](https://roadmap.sh/).
 
-### 1. Task Tracker CLI Details Project
+## Projets List
 
-- [Description du projet](https://roadmap.sh/projects/task-tracker)
-- [Mon implémentation](./Task-Tracker-CLI/README.md)
+### Backend Projects
+[Task Tracker](https://roadmap.sh/projects/task-tracker)
 
-### 2. Single Page CV
-
-- [Description du projet](https://roadmap.sh/projects/single-page-cv)
-- [Mon implémentation](./Single-Page-CV/README.md)
-
-### 3. Basic HTML Website
-
-- [Description du projet](https://roadmap.sh/projects/basic-html-website)
-- [Mon implémentation](./Basic-HTML-Website/README.md)
-
-### 3. Basic HTML Website
-
-- [Description du projet](https://roadmap.sh/projects/portfolio-website)
-- [Mon implémentation](./Personal-Portfolio/README.md)
-
-## À propos
-
-Ce document répertorie les différents projets et implémentations en cours de développement dans le cadre de **Roadmap.sh**.
-
-## Table des matières
-
-- [Projets](#projets)
-  - [Task Tracker CLI Details Project](#1-task-tracker-cli-details-project)
+### Frontend Projects
+[Single-Page CV](https://roadmap.sh/projects/single-page-cv),\
+[Basic HTML Website](https://roadmap.sh/projects/basic-html-website),\
+[Personal Portfolio](https://roadmap.sh/projects/portfolio-website)
