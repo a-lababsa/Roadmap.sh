@@ -14,4 +14,41 @@ describe("Github-activity", () => {
     const cli = new GithubActivity(args);
     expect(cli.username).toBe("alex");
   });
+
+  describe("should call github api", () => {
+    beforeEach(() => {
+      global.fetch = jest.fn();
+    });
+
+    const args = ["node", "script.js", "alex"];
+    const cli = new GithubActivity(args);
+
+    it("should set userExist to true when user exists", async () => {
+      // Arrange
+      const activity = new GithubActivity(["node", "script.js", "validUser"]);
+      (global.fetch as jest.Mock).mockResolvedValue({ status: 200 });
+
+      // Act
+      await activity.init();
+
+      // Assert
+      expect(activity.userExist).toBe(true);
+      expect(global.fetch).toHaveBeenCalledWith(
+        "https://api.github.com/users/validUser/events"
+      );
+    });
+
+    it('should set userExist to false when user does not exist', async () => {
+      // Arrange
+      const activity = new GithubActivity(['node', 'script.js', 'invalidUser']);
+      (global.fetch as jest.Mock).mockRejectedValue(new Error('Not found'));
+  
+      // Act
+      await activity.init();
+  
+      // Assert
+      expect(activity.userExist).toBe(false);
+      expect(global.fetch).toHaveBeenCalledWith('https://api.github.com/users/invalidUser/events');
+    });
+  });
 });
