@@ -8,6 +8,7 @@ This repository contains projects built following the [roadmap.sh](https://roadm
 [Task Tracker](https://roadmap.sh/projects/task-tracker)
 
 ### Frontend Projects
-[Single-Page CV](https://roadmap.sh/projects/single-page-cv),\
-[Basic HTML Website](https://roadmap.sh/projects/basic-html-website),\
-[Personal Portfolio](https://roadmap.sh/projects/portfolio-website)
+[Single-Page CV](https://roadmap.sh/projects/single-page-cv) \
+[Basic HTML Website](https://roadmap.sh/projects/basic-html-website) \
+[Personal Portfolio](https://roadmap.sh/projects/portfolio-website) \
+[Changelog Component](https://roadmap.sh/projects/changelog-component)
