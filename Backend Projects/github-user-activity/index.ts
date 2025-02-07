@@ -1,7 +1,5 @@
 #! /usr/bin/env node
 
-import { error } from "console";
-
 console.info("Github Activity");
 
 export class GithubActivity {
@@ -12,15 +10,14 @@ export class GithubActivity {
     const username = args[2];
 
     if (!username) {
-      throw new Error("Username is required as first parameter");
+      throw new Error("Please provide a GitHub username.");
     }
     this.username = username;
     this.userExist = false;
   }
 
-  async init() {
+  async init():Promise<void> {
     try {
-      // https://api.github.com/users/USERNAME/
       const response = await fetch(
         `https://api.github.com/users/${this.username}/events`
       );
@@ -31,9 +28,23 @@ export class GithubActivity {
       } else {
         console.info("User not found !!!");
       }
+
+      if (!response.ok) {
+        if(response.status === 404){
+          throw new Error("User not found. Please check the username");
+       }
+       else{
+          throw new Error(`Error fetching data ${response.status}`);
+       }  
+      }
+
     } catch (error) {
-      
       this.userExist = false;
+      if (error instanceof Error) {
+        console.warn(error.message);
+      } else {
+        console.error(error);
+      }
     }
   }
 }
