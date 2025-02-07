@@ -1,0 +1,31 @@
+{
+  "name": "github-user-activity",
+  "version": "1.0.0",
+  "description": "Use GitHub API to fetch user activity and display it in the terminal.",
+  "main": "index.ts",
+  "bin": {
+    "cli": "index.ts"
+  },
+  "scripts": {
+    "start": "ts-node index.ts",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-lababsa/Roadmap.sh.git"
+  },
+  "author": "Alexandre Lababsa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a-lababsa/Roadmap.sh/issues"
+  },
+  "homepage": "https://github.com/a-lababsa/Roadmap.sh#readme",
+  "dependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.1",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}
