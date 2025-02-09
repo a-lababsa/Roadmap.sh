@@ -11,4 +11,5 @@ This repository contains projects built following the [roadmap.sh](https://roadm
 [Single-Page CV](https://roadmap.sh/projects/single-page-cv) \
 [Basic HTML Website](https://roadmap.sh/projects/basic-html-website) \
 [Personal Portfolio](https://roadmap.sh/projects/portfolio-website) \
-[Changelog Component](https://roadmap.sh/projects/changelog-component)
+[Changelog Component](https://roadmap.sh/projects/changelog-component) \
+[Expense Tracker](https://roadmap.sh/projects/expense-tracker)
