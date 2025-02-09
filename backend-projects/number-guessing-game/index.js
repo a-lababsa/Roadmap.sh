@@ -18,6 +18,11 @@ const difficultyMap = {
   3: { name: "Hard", attempts: 3 },
 };
 
+const GAME_LIMITS = {
+    MIN: 1,
+    MAX: 100
+};
+
 program
   .name("Number Guessing Game")
   .description("Simple number guessing game to test your luck.")
@@ -50,21 +55,24 @@ program
     console.info("Let's start the game!");
 
     let attempts = 0;
-
+    let remainingAttempts = difficultyMap[choice].attempts;
     let guess;
     do {
-      if (attempts === difficultyMap[choice].attempts) {
+      if (remainingAttempts == 0) {
         console.log(
           `\nGame Over! The number was ${secretNumber}. Better luck next time!`
         );
         process.exit(0);
       }
-      attempts++;
-      
+      console.log(`\nRemaining attempts: ${remainingAttempts}`);
+      remainingAttempts--;
+
       guess = await question("\nEnter your guess: ");
 
-      if (isNaN(guess) || !inRange(guess, 1, 100)) {
+      if (isNaN(guess) || !inRange(guess, GAME_LIMITS.MIN, GAME_LIMITS.MAX)) {
         console.info("Please enter a valid number between 1 and 100.");
+        remainingAttempts++;
+        continue;
       }
 
       if (guess > secretNumber) {
@@ -72,6 +80,7 @@ program
       } else if (guess < secretNumber) {
         console.log(`\nIncorrect! The number is greater than ${guess}.`);
       }
+      attempts++;
     } while (guess != secretNumber);
 
     console.log(
