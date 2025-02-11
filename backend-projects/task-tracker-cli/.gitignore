@@ -1,13 +1,4 @@
-# Compiled JavaScript files
-*.js
-
-# Source maps
-*.js.map
-
-# Output directories
 /build
-
 tasks.json
-
-# Node_modules (unless using monorepo or specific package management)
 node_modules/
+package-lock.json
