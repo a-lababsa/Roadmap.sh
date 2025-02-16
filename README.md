@@ -8,7 +8,8 @@ This repository contains projects built following the [roadmap.sh](https://roadm
 [Task Tracker](https://roadmap.sh/projects/task-tracker) \
 [Expense Tracker](https://roadmap.sh/projects/expense-tracker) \
 [GitHub User Activity](https://roadmap.sh/projects/github-user-activity) \
-[Number Guessing Game](https://roadmap.sh/projects/number-guessing-game)
+[Number Guessing Game](https://roadmap.sh/projects/number-guessing-game) \
+[Unit Converter](https://roadmap.sh/projects/unit-converter)
 
 ### Frontend Projects
 [Single-Page CV](https://roadmap.sh/projects/single-page-cv) \
